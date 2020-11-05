@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAEA,EACI,QAAQ,CACR,SAAS,CACT,qBAAsB,CACtB,mCACJ","file":"main.a3afda65.chunk.css","sourcesContent":["\r\n\r\n*{\r\n    margin:0;\r\n    padding:0;\r\n    box-sizing: border-box;\r\n    font-family: 'Montserrat', sans-serif;\r\n}\r\n"]}
