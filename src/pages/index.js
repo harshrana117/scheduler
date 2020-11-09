@@ -1,13 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
-import { LoginFormElement } from '../components/LoginForm'
 import { Link } from 'react-router-dom';
-import { Link as LinkS } from 'react-scroll';
-import HeroImg from '../images/HeroImage.svg'
+import HeroImg from '../images/HeroImage.svg';
+
 const Home = () => {
     return (
         <IndexContainer>
-            <HeroSection>
                 <HeroContent>
                     <HeroImageContainer>
                         <HeroImage src={HeroImg} />
@@ -15,13 +13,11 @@ const Home = () => {
                     <HeroText>
                         <HeroHeading>Rev up your routine, manage your attendance, schedule, subject info like a pro.</HeroHeading>
                         <HeroLink>
-                            <HLinkS to='login'>Sign In</HLinkS>
+                            <HLink to='/login'>Sign In</HLink>
                             <HLink to="/signup">Sign Up</HLink>
                         </HeroLink>
                     </HeroText>
                 </HeroContent>
-            </HeroSection>
-            <LoginFormElement id="login" />
         </IndexContainer>
     )
 }
@@ -29,11 +25,16 @@ const Home = () => {
 export default Home;
 
 
+
+
+
+
+// index(landing) page styled components
+
 const IndexContainer = styled.div`
     padding:10px;
 `;
 
-const HeroSection = styled.div``;
 
 const HeroContent = styled.div`
     min-height:85vh;
@@ -107,20 +108,7 @@ const HeroLink = styled.div`
     }
 `;
 
-const HLinkS = styled(LinkS)`
-    background-color:#eeeeee;
-    color:#434343;
-    font-size:18px;
-    padding:5px 20px;
-    border:1px solid #cdcdcd;
-    border-radius:5px;
-    margin-right:20px;
 
-    &:hover{
-        border-color:#eeeeee;
-        cursor:pointer;
-    }
-`;
 
 const HLink = styled(Link)`
     text-decoration:none;
@@ -130,6 +118,7 @@ const HLink = styled(Link)`
     padding:5px 20px;
     border:1px solid #cdcdcd;
     border-radius:5px;
+    margin:0px 5px;
 
     &:hover{
         border-color:#eeeeee;

@@ -1,4 +1,5 @@
 import React from 'react'
+import LoginImage from '../../images/loginImage.svg';
 import {
     LoginContainer,
     Header,
@@ -6,20 +7,37 @@ import {
     UserInput,
     Button,
     SignupLinkContainer,
-    SignupLink
+    SignupLink,
+    DirectSigninContainer,
+    DirectSigninButton,
+    Text,
+    LoginIconGoogle,
+    LoginSection,
+    LoginImageContainer,
+    Image
 } from './LoginFormElements';
-export const LoginFormElement = ({id}) => {
+export const LoginFormElement = () => {
     return (
-       <LoginContainer id={id}>
-           <Header>Sign In</Header>
-           <LoginForm>
-               <UserInput type="text" placeholder="Username"/>
-               <UserInput type="password" placeholder="password"/>
-               <br/>
-               <Button>Login</Button>
-               <SignupLinkContainer>Dont have an account, <SignupLink to="/Signup">Signup</SignupLink> </SignupLinkContainer>
-           </LoginForm>
-       </LoginContainer>
+
+        <LoginSection>
+            <LoginContainer>
+                <Header>Sign In</Header>
+                <LoginForm>
+                    <UserInput type="text" placeholder="Username" />
+                    <UserInput type="password" placeholder="password" />
+                    <br />
+                    <Button>Login</Button>
+                    <DirectSigninContainer>
+                        <Text>Or login with</Text>
+                        <DirectSigninButton><LoginIconGoogle /></DirectSigninButton>
+                    </DirectSigninContainer>
+                    <SignupLinkContainer>Dont have an account, <SignupLink to="/Signup">Signup</SignupLink> </SignupLinkContainer>
+                </LoginForm>
+            </LoginContainer>
+            <LoginImageContainer>
+                <Image src={LoginImage} />
+            </LoginImageContainer>
+        </LoginSection>
     )
 }
 
